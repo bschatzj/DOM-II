@@ -11,6 +11,10 @@ const nav = document.querySelectorAll("a").forEach(el => {
     });
 });
 
+nav.click(function (event) {
+    event.preventDefault();
+  });
+
 
 
 const logo = document.querySelector(".logo-heading");
