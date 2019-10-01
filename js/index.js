@@ -75,3 +75,29 @@ function get_rand_color(){
 window.addEventListener('scroll', () => {
     get_rand_color();
 })
+
+
+const topBus = document.querySelector("img");
+
+topBus.addEventListener("mouseover", () => {
+    const stopping = new Audio("TIRE+SKID.mp3");
+    const driveBy = new Audio("BMW+DRIVEBY.mp3");
+console.log(topBus);
+    function driveForward() {
+        topBus.style.marginLeft = "2000px";
+        topBus.style.transition = "all 7s";
+        driveBy.play();
+    }
+    function driveBack() {
+        setTimeout(function(){ topBus.style.marginLeft = "0px";
+         topBus.style.transition = "all 3s"; }, 6000);
+     }
+     function stop(){
+         setTimeout(function() {
+             stopping.play();}, 8000);
+         }
+
+    driveForward();
+    driveBack();
+    stop();
+})
