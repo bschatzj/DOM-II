@@ -11,9 +11,14 @@ const nav = document.querySelectorAll("a").forEach(el => {
     });
 });
 
-nav.click(function (event) {
+
+const header = document.querySelector('a');
+
+header.addEventListener("click", (event) =>{
+    console.log(header);
     event.preventDefault();
-  });
+
+})
 
 
 
